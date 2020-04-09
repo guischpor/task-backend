@@ -31,3 +31,6 @@ Depois basta copiar o codigo das dependencias e colocar no packge json criado an
 Caso tenha copiado e colado as dependencias, Use:
 -- npm install
 
+---------------------------------
+Depois de configurado inicialmente o seu back com node use para executar:
+-- npm start
