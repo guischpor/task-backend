@@ -21,6 +21,9 @@ dependencias do backend: offline
     "nodemon": "2.0.2"
 }
 
+Instalando o knex glogal
+--> npm i knex -g
+
 --------------------------------
 Criando o arquivo packge json
 
@@ -34,3 +37,42 @@ Caso tenha copiado e colado as dependencias, Use:
 ---------------------------------
 Depois de configurado inicialmente o seu back com node use para executar:
 -- npm start
+
+----------------------------------
+Configuração DB PostgreSQL
+
+psql --version
+
+Iniciar o banco de dados com o comando use:
+--> psql -U postgres
+
+Ele vai pedir pra digitar a senha que vc definiu na instalação:
+no meu caso ela é 1234
+
+Para sair do psql use:
+--> \q
+
+Pra listar os databeses existentes use:
+--> \l
+
+Criando o bando de dados:
+--> create databse nome_do_banco;
+
+Para conectar ao banco use;
+--> \c nome_do_banco
+
+Para listas as tabelas criadas use?
+==> \dt
+
+----------------------------------------
+Knex Configuração
+
+Para criar o arquivo knexfke.js use:
+--> knex init
+
+Dentro do arquivo, irá conter todos as Configurações que vamos usar pra conectar com o banco de dados.
+
+Criar as migrates:
+--> knex migrate:make create_table_users
+--> knex migrate:make create_table_tasks
+
