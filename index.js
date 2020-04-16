@@ -2,14 +2,21 @@
 const express = require('express')
 const app = express()
 
-//port
-// const port = 3000
-// const status = 200
+//carrega os arquivos que se conectam com o banco de dados
+const db = require('./config/db')
 
-//passando requisiões como respostas
-// app.get('/', (req, res) => {
-//     res.status(200).send('Meu Backend!')
-// })
+//é responsavel por ajudar a carregar todos os modulos
+const consign = require('consign')
+
+//consign ja executando todos os modulos
+consign()
+    .then('./config/middlewares.js')
+    .then('./api')
+    .then('./config/routes.js')
+    .into(app)
+
+//setando o db no app
+app.db = db
 
 //anexando a porta e o endereço
 app.listen(3000, () => {

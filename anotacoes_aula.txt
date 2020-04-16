@@ -76,3 +76,9 @@ Criar as migrates:
 --> knex migrate:make create_table_users
 --> knex migrate:make create_table_tasks
 
+Com as migrates criadas e configuradas no projeto, você pode usar o comando:
+--> knex migrate:latest
+
+para excluir migrates tabelas use:
+--> knex migrate:rollback
+
