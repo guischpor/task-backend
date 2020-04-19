@@ -10,6 +10,7 @@ const consign = require('consign')
 
 //consign ja executando todos os modulos
 consign()
+    .include('./config/passport.js')
     .then('./config/middlewares.js')
     .then('./api')
     .then('./config/routes.js')
