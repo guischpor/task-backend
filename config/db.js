@@ -1,4 +1,4 @@
-//configuração de conexão do bd
+//configuração de conexão do db
 const config = require('../knexfile')
 const knex = require('knex')(config)
 
